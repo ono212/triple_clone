@@ -26,7 +26,7 @@ const TripleLogo = ({ animationStyle }: Props) => {
     <Container animationStyle={animationStyle}>
       <img
         src={require('../../assets/images/triple2x.png')}
-        alt="TripleLogo"
+        alt="Triple 로고"
         width="100%"
         height="100%"
       />
