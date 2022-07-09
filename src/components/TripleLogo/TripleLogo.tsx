@@ -30,7 +30,7 @@ const TripleLogo = ({ animationStyle }: Props) => {
         width="100%"
         height="100%"
       />
-      <Text>2019년 2월 기준</Text>
+      <Text>2021년 12월 기준</Text>
     </Container>
   )
 }

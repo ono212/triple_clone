@@ -26,9 +26,9 @@ function App() {
       <TripleLogo animationStyle={fadeInUpByOrder(0)} />
       <MertricAndAwardContainer>
         <Metrics animationStyle={fadeInUpByOrder(1)}>
-          <MetricItem maxNumber={350} strongText="만 명" text="의 사용자" />
-          <MetricItem maxNumber={21} strongText="만 개" text="의 리뷰" />
-          <MetricItem maxNumber={650} strongText="만 개" text="의 저장" />
+          <MetricItem maxNumber={700} strongText="만 명" text="의 여행자" />
+          <MetricItem maxNumber={100} strongText="만 개" text="의 여행 리뷰" />
+          <MetricItem maxNumber={470} strongText="만 개" text="의 여행 일정" />
         </Metrics>
         <Awards animationStyle={fadeInUpByOrder(2)} />
       </MertricAndAwardContainer>
