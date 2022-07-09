@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { ReactChild, ReactNode } from 'react'
+import { ReactNode } from 'react'
 import styled, { CSSProp } from 'styled-components'
 
 interface Props {
@@ -7,19 +6,15 @@ interface Props {
   children: ReactNode
 }
 
-const MetricsContainer = styled.div<Props>`
+const Container = styled.div<Props>`
   display: flex;
   flex-direction: column;
   gap: 14px;
-  ${({ animationStyle: custom }) => custom && custom};
+  ${({ animationStyle }) => animationStyle && animationStyle};
 `
 
 const Metrics = ({ animationStyle, children }: Props) => {
-  return (
-    <MetricsContainer animationStyle={animationStyle}>
-      {children}
-    </MetricsContainer>
-  )
+  return <Container animationStyle={animationStyle}>{children}</Container>
 }
 
 export default Metrics
