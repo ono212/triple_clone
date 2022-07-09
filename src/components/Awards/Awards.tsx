@@ -34,8 +34,8 @@ const Awards = ({ animationStyle }: Props) => {
         <img
           src={require('../../assets/images/play-store2x.png')}
           alt="2018 구글 플레이스토어"
-          width="42px"
-          height="42px"
+          width="45px"
+          height="45px"
         />
         <TextContainer>
           <Text>2018 구글 플레이스토어</Text>
@@ -46,8 +46,8 @@ const Awards = ({ animationStyle }: Props) => {
         <img
           src={require('../../assets/images/badge-apple4x.png')}
           alt="2018 애플 앱스토어"
-          width="42px"
-          height="42px"
+          width="45px"
+          height="45px"
         />
         <TextContainer>
           <Text>2018 애플 앱스토어</Text>

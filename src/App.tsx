@@ -10,7 +10,8 @@ const Cotainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 250px;
-  padding: 20px 200px 20px 200px;
+  width: 1200px;
+  margin: 0 auto;
 `
 
 const MertricAndAwardContainer = styled.div`
