@@ -1,6 +1,7 @@
 {
   "name": "prc1",
   "version": "0.1.0",
+  "prettier": "@titicaca/eslint-config-triple/prettierrc",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
@@ -13,6 +14,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "styled-components": "^5.3.5",
     "typescript": "^4.7.4",
     "web-vitals": "^2.1.4"
   },
@@ -20,7 +22,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint:es": "eslint **/*.{js,ts,tsx}",
+    "lint:es:fix": "npm run lint:es -- --fix",
+    "prettier": "prettier **/* --check",
+    "prettier:fix": "prettier **/* --write",
+    "lint:style": "stylelint './**/*.{js,ts,tsx}'",
+    "lint:style:fix": "stylelint './**/*.{js,ts,tsx}' --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +47,32 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.18.2",
+    "@stylelint/postcss-css-in-js": "^0.38.0",
+    "@titicaca/eslint-config-triple": "^3.1.0",
+    "@types/styled-components": "^5.1.25",
+    "@typescript-eslint/eslint-plugin": "^5.30.5",
+    "@typescript-eslint/parser": "^5.30.5",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-config-standard-jsx": "^11.0.0",
+    "eslint-import-resolver-typescript": "^3.2.4",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.0",
+    "eslint-plugin-n": "^15.2.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "postcss-syntax": "^0.36.2",
+    "prettier": "^2.7.1",
+    "stylelint": "^14.9.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^26.0.0",
+    "stylelint-config-styled-components": "^0.1.1"
   }
 }
