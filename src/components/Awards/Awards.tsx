@@ -1,9 +1,7 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import styled, { CSSProp } from 'styled-components'
 
 interface Props {
-  custom: CSSProp
-  items?: Array<string> // Array<NodeRequire>
+  animationStyle: CSSProp
 }
 
 const Container = styled.div<Props>`
@@ -11,7 +9,7 @@ const Container = styled.div<Props>`
   flex-direction: row;
   gap: 30px;
   padding-bottom: 50px;
-  ${({ custom }) => custom && custom};
+  ${({ animationStyle }) => animationStyle && animationStyle};
 `
 const Text = styled.span`
   font-size: 14px;
@@ -27,9 +25,9 @@ const TextContainer = styled.div`
   flex-direction: column;
 `
 
-const Award = ({ custom, items }: Props) => {
+const Awards = ({ animationStyle }: Props) => {
   return (
-    <Container custom={custom}>
+    <Container animationStyle={animationStyle}>
       <AwardItem>
         <img
           src={require('../../assets/images/play-store2x.png')}
@@ -58,4 +56,4 @@ const Award = ({ custom, items }: Props) => {
   )
 }
 
-export default Award
+export default Awards
