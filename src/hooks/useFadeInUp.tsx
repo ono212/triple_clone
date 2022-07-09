@@ -14,7 +14,7 @@ const fadeInUp = keyframes`
 
 export function useFadeInUp(order: number) {
   const duration = 700
-  const delay = order === 1 ? 0 : 100 * order
+  const delay = 100 * order
 
   return css`
     opacity: 0;
