@@ -1,25 +1,37 @@
 import { useEffect, useState } from 'react'
 
-function easeOutExpo(t: number): number {
-  return t === 1 ? 1 : 1 - Math.pow(2, -10 * t)
+/**
+ * 시간(x)이 갈수록 기울기가 완만하게 줄어드는 그래프
+ * @param xAxis - 시간
+ * @return x에 대한 y값
+ */
+function easeOutFormula(xAxis: number): number {
+  return 1 - Math.pow(1 / 1024, xAxis)
 }
 
-export default function useCountUp(end: number, start = 0, duration = 2000) {
-  const [count, setCount] = useState(start)
-  const frameRate = 1000 / 60 // 숫자를 갱신하는 주기 (초) === 몇 초에 한 번씩 숫자를 갱신할건지
-  const totalFrame = Math.round(duration / frameRate) // 갱신하는 횟수
+function getProgress(xAxis: number): number {
+  return xAxis === 1 ? 1 : easeOutFormula(xAxis)
+}
+
+const ONE_SECOND = 1000
+const HUMAN_RECOGNIZABLE_FRAME_NUMBER_PER_SECOND = 60
+
+export default function useCountUp(end: number, duration = 2000) {
+  const [displayCount, setDisplayCount] = useState(0)
+  const frameRate = ONE_SECOND / HUMAN_RECOGNIZABLE_FRAME_NUMBER_PER_SECOND // 숫자를 갱신하는 주기 (초) === 몇 초에 한 번씩 숫자를 갱신할건지
+  const totalFrameNumber = Math.round(duration / frameRate) // 갱신하는 횟수
 
   useEffect(() => {
-    let currentNumber = start
+    let currentFrameNumber = 0
     const counter = setInterval(() => {
-      const progress = easeOutExpo(++currentNumber / totalFrame)
-      setCount(Math.round(end * progress))
+      const progress = getProgress(++currentFrameNumber / totalFrameNumber)
+      setDisplayCount(Math.round(end * progress))
 
       if (progress === 1) {
         clearInterval(counter)
       }
     }, frameRate)
-  }, [end, frameRate, start, totalFrame])
+  }, [end, frameRate, totalFrameNumber])
 
-  return count
+  return displayCount
 }
