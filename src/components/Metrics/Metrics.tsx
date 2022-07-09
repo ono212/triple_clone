@@ -10,6 +10,7 @@ interface Props {
 const MetricsContainer = styled.div<Props>`
   display: flex;
   flex-direction: column;
+  gap: 14px;
   ${({ custom }) => custom && custom};
 `
 

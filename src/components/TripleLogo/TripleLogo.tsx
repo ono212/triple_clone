@@ -30,6 +30,9 @@ const Container2 = styled.div`
 const Container = styled.div<Props>`
   display: flex;
   flex-direction: column;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
   width: 400px;
   height: 338px;
   ${({ custom }) => custom && custom};
@@ -40,18 +43,18 @@ const Container = styled.div<Props>`
 const Text = styled.span`
   font-size: 15px;
   margin-top: -60px;
+  color: rgba(58, 58, 58, 0.7);
 `
 
 const TripleLogo = ({ custom }: Props) => {
-  // [duration, delay, fadeInUp]
-  // const ani = useFadeInUp(1)
   return (
     <Container2>
       <Container custom={custom}>
-        {/* <Container duration={duration} delay={delay} fadeInUp={fadeInUp}> */}
         <img
           src={require('../../assets/images/triple2x.png')}
           alt="TripleLogo"
+          width="100%"
+          height="100%"
         />
         <Text>2019년 2월 기준</Text>
       </Container>
