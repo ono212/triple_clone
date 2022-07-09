@@ -3,7 +3,7 @@ import { ReactChild, ReactNode } from 'react'
 import styled, { CSSProp } from 'styled-components'
 
 interface Props {
-  custom: CSSProp
+  animationStyle: CSSProp
   children: ReactNode
 }
 
@@ -11,11 +11,15 @@ const MetricsContainer = styled.div<Props>`
   display: flex;
   flex-direction: column;
   gap: 14px;
-  ${({ custom }) => custom && custom};
+  ${({ animationStyle: custom }) => custom && custom};
 `
 
-const Metrics = ({ custom, children }: Props) => {
-  return <MetricsContainer custom={custom}>{children}</MetricsContainer>
+const Metrics = ({ animationStyle, children }: Props) => {
+  return (
+    <MetricsContainer animationStyle={animationStyle}>
+      {children}
+    </MetricsContainer>
+  )
 }
 
 export default Metrics
