@@ -1,46 +1,15 @@
-# Getting Started with Create React App
+# 트리플 사전 과제
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 프로젝트 실행 방법
 
-## Available Scripts
+```
+npm install
+npm run start
+```
 
-In the project directory, you can run:
+## 사용한 기술과 선택한 이유
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `styled-component`: CSS파일로 작성해서 사용하면, 스타일의 적용 범위가 전역이라서 사이드 이펙트가 발생할 확률이 높아집니다.
+  styled-component를 사용하면, 해당 컴포넌트에 대해서만 스타일만 정의하고, 적용 범위도 한정적이라서 사이드 이펙트를 발생할 확률이 적어집니다.
+  또한 한번 정의하면, 쉽게 접근하여 필요할 때마다 사용할 수 있답니다!
+- `css keyframes`: 각 컴포넌트마다 영역별로 등장하는 시점과 간격을 직접 제어해야 하기 때문입니다.
