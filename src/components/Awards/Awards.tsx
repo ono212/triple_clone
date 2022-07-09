@@ -13,12 +13,14 @@ const Container = styled.div<Props>`
 `
 const Text = styled.span`
   font-size: 14px;
+  font-weight: bold;
   color: rgba(58, 58, 58, 0.8);
+  line-height: 22px;
 `
 const AwardItem = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 6px;
 `
 const TextContainer = styled.div`
   display: flex;
