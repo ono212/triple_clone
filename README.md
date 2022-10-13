@@ -1,4 +1,4 @@
-# 트리플 사전 과제
+# 트리플 클론
 
 ## 프로젝트 실행 방법
 
@@ -6,7 +6,7 @@
 npm install
 npm run start
 ```
-
+Cancel changes
 ## 사용한 기술과 선택한 이유
 
 - `styled-component`: CSS파일로 작성해서 사용하면, 스타일의 적용 범위가 전역이라서 사이드 이펙트가 발생할 확률이 높아집니다.
